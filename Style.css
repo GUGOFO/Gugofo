@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h2.titulo{
+    color: white;
+    font-size: 52px;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+/* ESTILO DO CABEÇARIO */
+
+header img{
+    width:100% ;
+    height: 90px;
+}
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #5d5d5d;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    font-size: 24px;
+}
+header a:hover{
+     color: white;
+     transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav li{
+    display: inline-block;
+    padding: 0 40px;
+}
+header .GGF-contato button{
+    padding: 10px 40px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #A043D7;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+header .GGF-contato button:hover{
+    box-shadow: 0px 0px 8px #8b37bbc2;
+}
+
+/* "Quem sou eu" */
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+span{
+    color: #A043D7;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+    color: #ffffff;
+
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #A043D7;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color: #A043D7;
+    animation: words 15s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #A043D7;
+    }
+}
+
+@keyframes words{
+    0%, 33%{
+        content: "Eng. de Software";
+    }
+    34%, 66%{
+        content: "Universitario";
+    }
+    67%, 100%{
+        content: "Desenvolvedor";
+    }
+}
+
+/* ESTILÇO DAS ESPECIALIDADES */
+
+section.Especialidades{
+    padding: 40px 4%;
+    margin-bottom: -180px;
+}
+
+section.Especialidades .flex{
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Especialidades .especialidades_box{
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.Especialidades .especialidades_box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 18px #ffffff6b;
+}
+
+.Especialidades .especialidades_box i{
+    font-size: 80px;
+    color: #A043D7;
+}
+
+.Especialidades .especialidades_box h3{
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.Especialidades .especialidades_box p{
+    font-size: 20px;
+}
+
+/* Sobre */
+
+.bnt{
+    display: inline-block;
+    padding: 16px 45px;
+    background: #A043D7;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid #A043D7;
+    transition: all ease .5s;
+    border-radius: 20px;
+    text-decoration:none;
+}
+
+.bnt:hover{
+    transform: translateX(5px);
+    background: transparent;
+    border: 2px solid #A043D7;
+    color: #8b37bbc2;
+}
+
+.sobre-texto{
+    color: white;
+}
+
+.Sobre{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    align-items: center;
+    gap: 4rem;
+    margin-top: -290px;
+}
+
+.sobre-img img{
+    width: 100%;
+    height: auto;
+}
+
+.sobre-texto h5{
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.sobre-texto p{
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 3rem;
+}
+
+/* Portifolios */
+
+section.portifolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #a143d794;
+}
+
+section.portifolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img_port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img_port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000008f;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* Perfils */
+
+.contato {
+    color: white;
+}
+
+.contato {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    align-items: center;
+    gap: 5rem;
+}
+
+.contato_esquerda{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+}
+
+.in i{
+    color: #A043D7;
+    opacity: 0.5;
+    font-size: 120px;
+    margin-bottom: 15px;
+    transition: all ease .40s;
+}
+
+.in i:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.in h4{
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.contato-direita h2{
+    font-family: 'dosis', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.contato-direita a{
+    display: inline-block;
+    color: #A043D7;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #A043D7;
+    padding: 3px 0;
+    transition: all ease .4s ;
+}
+
+.contato-direita a:hover{
+    transform: translateY(-5px);
+    border-bottom: 2px solid #A043D7;
+}
+
+.contato-direita p{
+    color: #b8b8b8;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+footer {
+	background-color: #a143d75b;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.in button{
+    border: none;
+    background-color: transparent;
+}
